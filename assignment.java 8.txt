@@ -1,0 +1,76 @@
+2. package collection;
+
+import java.util.*;
+import java.util.Map;
+
+public class Hash{
+
+public static void main(String[] args) {
+ HashMap<Integer,String>hp=new HashMap<Integer,String>();
+		hp.put(445, "kohli");
+		hp.put(256,"hardik");
+		hp.put(789, "rohith sharma");
+		hp.put(900, "siraj");
+		
+		for(Map.Entry m:hp.entrySet()) {
+			System.out.println(m.getKey()+" "+m.getValue());
+		}}}
+			
+				
+1.		
+package collection;
+
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+class Cust implements Comparable<Cust>
+{
+	int acno;
+	String cname;
+	int bal;
+	public Cust(int acno, String cname, int bal) {
+		super();
+		this.acno = acno;
+		this.cname = cname;
+		this.bal = bal;
+	}
+	
+	public int compareTo(Cust c) {
+		if(acno==c.acno)
+		{
+			return 0;
+		}
+		else if(acno>c.acno)
+		{
+			return 1;
+		}
+		else if(acno<c.acno)
+		{
+			return -1;
+		}
+		return acno;
+	}
+
+
+
+	public static void main(String[] args) {
+		Cust c=new Cust(55,"nani",52000);
+		Cust c2=new Cust(55,"cherry",66000);
+		Cust c3=new Cust(55,"dulkar",56000);
+		ArrayList<Cust>al=new ArrayList<Cust>();
+al.add(c);
+al.add(c2);
+al.add(c3);
+Collections.sort(al);
+for(Cust s:al)
+{
+	System.out.println(s.acno+" "+s.cname+" "+s.bal);
+}
+	}
+
+}
+
+	
+
+
